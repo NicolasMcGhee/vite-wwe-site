@@ -74,6 +74,7 @@ export default function Infomation() {
         </p>
       </div>
       <h1 className="title">Hover Over For More Information</h1>
+
       <section className="flexCards">
         {/* Stone Cold Steve Austin Card */}
         <div className="flipCard">
@@ -112,6 +113,7 @@ export default function Infomation() {
             </div>
           </div>
         </div>
+        
         {/* Dwayne The Rock Johnson Card */}
         <div className="flipCard">
           <div className="flipCard_Inner">

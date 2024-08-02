@@ -1,6 +1,8 @@
 .flex {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
 .title {
@@ -8,17 +10,18 @@
     margin-bottom: 2rem;
 }
 
-
-.AustinCard {
-    background: white;
-    color: black;
+.stats {
+     line-height: 2rem;
+    
 }
 
-.stats {
-    line-height: 2rem;
+.stats h2 {
+    text-align: center;
+    text-decoration: underline;
 }
 
 .desc {
+    background-color: whitesmoke;
     font-size: 1.4rem;
     line-height: 1.7;
     display: flex;
@@ -33,12 +36,9 @@
 }
 
 .AustinCard {
-    /* Gold Animated Border */
     position: relative;
-    /* border: 5px solid gold; */
     border-radius: 20px;
     padding: 2rem 4rem;
-    /* box-shadow: 10px 5px 5px black; */
 }
 
 .AustinCard::before,
@@ -63,6 +63,90 @@
 
 @keyframes rotation {
     0% { --gradient-angle: 0deg;}
-    /* 50% {--gradient-angle: 180deg;} */
+    50% {--gradient-angle: 180deg;}
     100% {--gradient-angle: 360deg;}
+}
+
+
+/* The flip card container */
+/* Remove perspective if you don't want the 3D effect */
+.flipCard {
+  border: 3px solid black;
+  background-color: white;
+  width: 100%;
+  height: 500px;
+  border-radius: 20px;   
+  /* perspective: 1000px;  */
+}
+
+
+/* This container is needed to position the front and back side */
+.flipCard_Inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+/* Causes horizontal flip when mousee is moved over */
+.flipCard:hover .flipCard_Inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flipCard_Front, .flipCard_Back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: inherit;
+}
+
+
+
+/* Style the front side (fallback if image is missing) */
+.flipCard_Front {
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.flipCard_Front img {
+  border-radius: 20px;
+  
+}
+
+.flipCard_Info {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1rem; */
+}
+
+/* Style the back side */
+.flipCard_Back {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+  gap: 20px;
+  color: black;
+  transform: rotateY(180deg);
+  text-align: left;
+}
+
+.flipCard_Back h4 {
+  font-size: 3rem;
+  text-decoration: underline;
+  align-self: center;
 }

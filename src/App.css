@@ -1,13 +1,42 @@
-body {
-    /* background-color: black; */
-    min-height: 200vh;
+
+
+.HomeTitle {
+    text-align: center;
+    margin: 2rem 0;
+    text-decoration: underline;
 }
 
 .cards {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 4rem;
     margin: 4rem auto 0;
-    max-width: 2000px;
+    max-width: 1800px;
+    padding: 0 1rem;
+    
+}
 
+
+.separator {
+    padding-bottom: 2rem;
+    border-bottom: 2px solid black;
+}
+
+.GalleryImg {
+    padding: 0 1rem;
+    display: grid;
+    place-content: center;
+    /* max-width: 100%; */
+}
+
+.GalleryImg img {
+    max-width: 100%;
+}
+
+@media (width < 1699px) {
+    .cards {
+        flex-direction: column;
+        max-width: 75%;
+        padding: 0;
+    }
 }
