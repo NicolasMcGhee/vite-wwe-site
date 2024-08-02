@@ -1,0 +1,13 @@
+body {
+    /* background-color: black; */
+    min-height: 200vh;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin: 4rem auto 0;
+    max-width: 2000px;
+
+}

@@ -8,7 +8,7 @@
 
 .cards {
     display: flex;
-    width: 1500px;
+    max-width: 1500px;
     margin: 0 auto;
     gap: 4rem;
     align-items: flex-start;
@@ -16,7 +16,7 @@
 
 .card {
     font-size: 1.4rem;
-    width: 50%; 
+    max-width: 50%; 
     padding: 20px 40px;
     /* border-radius: 20px; */
     /* box-shadow: 2px 5px 5px black; */
@@ -50,6 +50,22 @@
     text-align: left;
     line-height: 1.7;
 }
+/* Media Query */
+
+@media (width < 1200px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card:nth-child(even) {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-right: 0px;
+    border-left: 0px;
+  }
+}
+
 
 .flexCard-section {
   /* border: 1px solid; */
@@ -75,7 +91,7 @@
 }
 
 .flexCards {
-    margin-top: 3rem;
+    /* margin-top: 3rem; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,6 +99,14 @@
     max-width: 50%;
     gap: 4rem;
     margin: 5rem auto;
+}
+
+/* Media Query */
+@media (width < 1364px) {
+  .flexCards {
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */

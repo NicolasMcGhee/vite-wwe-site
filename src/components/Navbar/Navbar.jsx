@@ -4,21 +4,17 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <div class="dropdown">
-          <button class="dropbtn">
-            Dropdown
-            <i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
+      <h1>Wrestler Stat Page</h1>
+      <section className="nav_Flex">
+        <div className="nav_Home">
+          <p>Home</p>
         </div>
-      </div>
+        <div className="nav_Promotions">
+          <p>WWE</p>
+          <p>WCW</p>
+          <p>ECW</p>
+        </div>
+      </section>
     </nav>
   );
 }

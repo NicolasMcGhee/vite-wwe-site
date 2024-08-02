@@ -1,0 +1,68 @@
+.flex {
+    display: flex;
+    align-items: flex-start;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+.AustinCard {
+    background: white;
+    color: black;
+}
+
+.stats {
+    line-height: 2rem;
+}
+
+.desc {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.AustinCard {
+    /* Gold Animated Border */
+    position: relative;
+    /* border: 5px solid gold; */
+    border-radius: 20px;
+    padding: 2rem 4rem;
+    /* box-shadow: 10px 5px 5px black; */
+}
+
+.AustinCard::before,
+.AustinCard::after {
+    content: '';
+    position: absolute;
+    inset: -.5rem;
+    z-index: -1;
+    background: linear-gradient(
+        var(--gradient-angle),
+        hsla(241, 100%, 55%, 0.051),
+        hsl(241, 100%, 55%),
+        hsla(241, 100%, 55%, 0.051));
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+}
+
+.AustinCard::after {
+    filter: blur(.5rem);
+}
+
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg;}
+    /* 50% {--gradient-angle: 180deg;} */
+    100% {--gradient-angle: 360deg;}
+}

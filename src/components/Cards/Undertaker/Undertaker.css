@@ -1,0 +1,47 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.UndertakerCard {
+    background: white;
+    color: black;
+}
+
+
+
+
+.UndertakerCard {
+    /* Gold Animated Border */
+    position: relative;
+    /* border: 5px solid gold; */
+    border-radius: 20px;
+    padding: 2rem 4rem;
+    /* box-shadow: 10px 5px 5px black; */
+}
+.UndertakerCard::before,
+.UndertakerCard::after {
+    content: '';
+    position: absolute;
+    inset: -.5rem;
+    z-index: -1;
+    background: linear-gradient(
+        var(--gradient-angle),
+        #1d093d,
+        #67007e,
+        #1d093d);
+    border-radius: inherit;
+    animation: rotation 20s linear infinite;
+}
+
+.UndertakerCard::after {
+    filter: blur(.5rem);
+}
+
+
+@keyframes rotation {
+    0% { --gradient-angle: 0deg;}
+    /* 50% {--gradient-angle: 180deg;} */
+    100% {--gradient-angle: 360deg;}
+}
