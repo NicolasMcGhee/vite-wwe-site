@@ -1,9 +1,14 @@
-
-
 .HomeTitle {
     text-align: center;
     margin: 2rem 0;
     text-decoration: underline;
+}
+
+.HomeTitleWCW {
+    text-align: center;
+    margin-top: 6rem;
+    text-decoration: underline;
+
 }
 
 .cards {
@@ -24,14 +29,15 @@
 
 .GalleryImg {
     padding: 0 1rem;
-    display: grid;
-    place-content: center;
-    /* max-width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.GalleryImg img {
+/* .GalleryImg img {
     max-width: 100%;
-}
+} */
 
 @media (width < 1699px) {
     .cards {
@@ -39,4 +45,4 @@
         max-width: 75%;
         padding: 0;
     }
-}
+} 

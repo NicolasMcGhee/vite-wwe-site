@@ -1,15 +1,14 @@
 .navbar {
   text-align: center;
   max-width: 100%;
-  border-bottom: 2px lightslategrey solid;
+  border-bottom: 2px rgba(119, 136, 153, 0.321) solid;
   /* color: whitesmoke; */
+  padding: 1rem 0;
 }
 
-.navbar h1 {
-  font-size: 4rem;
-  text-shadow: 10px 10px 20px lightslategrey;
-  text-decoration: underline;
-  /* position: relative; */
+.homeLink {
+  /* text-decoration: none; */
+  color: black;
 }
 
 .nav_Flex {
@@ -23,4 +22,33 @@
   display: flex;
   align-items: center;
   gap: 3rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Adds a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }

@@ -10,6 +10,11 @@
     margin-bottom: 2rem;
 }
 
+.cardName {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
 .stats {
      line-height: 2rem;
     
@@ -71,7 +76,7 @@
 /* The flip card container */
 /* Remove perspective if you don't want the 3D effect */
 .flipCard {
-  border: 3px solid black;
+  /* border: 3px solid black; */
   background-color: white;
   width: 100%;
   height: 500px;

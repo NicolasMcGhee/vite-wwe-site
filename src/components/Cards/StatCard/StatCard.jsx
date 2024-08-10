@@ -1,14 +1,16 @@
 import React from "react";
-import "./StoneCold.css";
-
-export default function StoneCold() {
+//import "./StatCard.css";
+import styles from './StatCard.module.css'
+//styles.AustinCard
+//stats
+//desc
+export default function StatCard({wrestlerName}) {
   return (
-    <div className="flipCard">
-      
-      <section className="flipCard_Inner AustinCard">
+    <div className={styles.flipCard}>
+      <h1 className={styles.cardName}>{wrestlerName}</h1>
+      <section className={`${styles.flipCard_Inner} ${styles.AustinCard}`}>
         {/* Frontside of Card */}
-        <div className="flipCard_Front stats">
-          
+        <div className={`${styles.flipCard_Front} ${styles.stats}`}>
           <h2>Stats</h2>
           <h3>Height: 6 ft 10 in (2.08 m)</h3>
           <h3>Weight: 299 lbs (136 kg)</h3>
@@ -21,8 +23,8 @@ export default function StoneCold() {
           </h3>
         </div>
         {/* Backside Of Card */}
-        <div className="flipCard_Back desc">
-        <h4>Summary</h4>
+        <div className={`${styles.flipCard_Back} ${styles.desc}`}>
+          <h4>Summary</h4>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum non
             hic cupiditate nulla, ex sequi exercitationem nesciunt neque nisi

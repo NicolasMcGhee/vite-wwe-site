@@ -1,5 +1,5 @@
 import React from "react";
-import "./Information.Module.css";
+import "./Information.module.css";
 import Logo from "/Logos/WWE_Logo.jpg";
 
 export default function Infomation() {

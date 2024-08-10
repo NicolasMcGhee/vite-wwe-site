@@ -4,15 +4,38 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h1>Wrestler Stat Page</h1>
       <section className="nav_Flex">
         <div className="nav_Home">
-          <p>Home</p>
+          <a href="#" className="homeLink">Home</a>
         </div>
         <div className="nav_Promotions">
-          <p>WWE</p>
-          <p>WCW</p>
-          <p>ECW</p>
+          {/* Dropdown Links - WWE */}
+          <div className="dropdown">
+            <a className="dropbtn">WWE</a>
+            <div className="dropdown-content">
+              <a href="#">History</a>
+              <a href="#">Superstars</a>
+              <a href="#">Championships</a>
+            </div>
+          </div>
+          {/* Dropdown Links - WCW */}
+          <div className="dropdown">
+            <a className="dropbtn">WCW</a>
+            <div className="dropdown-content">
+              <a href="#">History</a>
+              <a href="#">Superstars</a>
+              <a href="#">Championships</a>
+            </div>
+          </div>
+          {/* Dropdown Links - ECW */}
+          <div className="dropdown">
+            <a className="dropbtn">ECW</a>
+            <div className="dropdown-content">
+              <a href="#">History</a>
+              <a href="#">Superstars</a>
+              <a href="#">Championships</a>
+            </div>
+          </div>
         </div>
       </section>
     </nav>
